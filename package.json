@@ -11,24 +11,37 @@
     "pack": "npx framer-plugin-tools@latest pack"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.11.0",
     "framer-plugin": "^3",
+    "lucide-react": "^0.510.0",
     "react": "^18",
     "react-dom": "^18",
-    "vite-plugin-mkcert": "^1"
+    "vite-plugin-mkcert": "^1",
+    "zustand": "^5.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9",
-    "@types/react-dom": "^18",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.5.14",
     "@types/react": "^18",
-    "@vitejs/plugin-react-swc": "^3",
+    "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react-swc": "^3",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.9",
-    "typescript-eslint": "^8.0.1",
-    "vite-plugin-framer": "^1",
-    "eslint": "^9.9.0",
     "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.3",
-    "vite": "^6"
+    "typescript-eslint": "^8.0.1",
+    "vite": "^6",
+    "vite-plugin-framer": "^1"
   }
 }
