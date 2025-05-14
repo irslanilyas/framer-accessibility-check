@@ -6,6 +6,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        'pulse-slow': {
+      '0%, 100%': { transform: 'scale(1)' },
+      '50%': { transform: 'scale(1.03)' },
+    },
+    sparkle: {
+      '0%, 100%': { opacity: 0, transform: 'scale(0)' },
+      '50%': { opacity: 1, transform: 'scale(1.2)' },
+    }
+  },
+  animation: {
+    'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+    sparkle: 'sparkle 1.5s ease-in-out infinite', 
+      },
+      
       fontWeight: {
         550: '550'
       },
@@ -46,6 +61,6 @@ module.exports = {
     },
   },
   plugins: [],
-  // Support Framer's dark/light mode
-  darkMode: 'class',
+  // Support Framer's dark/light mode using data attribute
+  darkMode: ['class', '[data-framer-theme="dark"]'],
 }

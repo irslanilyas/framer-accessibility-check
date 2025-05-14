@@ -36,8 +36,7 @@ export const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
         </div>
         
         <div className="mt-4 flex space-x-2">
-          <Button
-            size="sm"
+          <Button  
             variant="primary"
             onClick={() => locateIssue(issue.id)}
             leftIcon={
@@ -51,7 +50,6 @@ export const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
           </Button>
           
           <Button
-            size="sm"
             variant="secondary"
             onClick={() => toggleIssueDetails(issue.id)}
           >

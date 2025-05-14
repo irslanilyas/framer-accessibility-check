@@ -50,12 +50,12 @@ const App: React.FC = () => {
       <PromoBanner />
       
       {/* Header */}
-      <div className="mb-6 bg-[#F8F8F8] p-4 rounded-lg">
+      <div className="mb-6 bg-[#F8F8F8] p-4 rounded-lg dark:bg-[#2B2B2B]">
         {isScanning ? (
           // Scanning state header
           <>
-            <h1 className="text-[20px] font-bold mb-1">Welcome to Accessibility Checker</h1>
-            <p className="text-[16px] font-normal dark:text-gray-300 mb-4">
+            <h1 className="text-[20px] font-bold mb-1 dark:text-white">Welcome to Accessibility Checker</h1>
+            <p className="text-[16px] font-normal dark:text-[#C8C5C5] mb-4">
               Analyse your framer project for accessibility issues
             </p>
             <div className="space-y-4">
@@ -66,8 +66,8 @@ const App: React.FC = () => {
         ) : issues.length > 0 ? (
           // Scan completed header
           <>
-            <h1 className="text-[20px] font-bold mb-1">Scan Completed</h1>
-            <p className="text-[16px] font-normal dark:text-gray-300 mb-4">
+            <h1 className="text-[20px] font-bold mb-1 dark:text-white">Scan Completed</h1>
+            <p className="text-[16px] font-normal mb-4 dark:text-[#C8C5C5]">
               Generate a report or click the scan button to scan again
             </p>
             <div className="flex space-x-2 items-center">
@@ -83,14 +83,14 @@ const App: React.FC = () => {
         ) : (
           // Initial welcome state header
           <>
-            <h1 className="text-[20px] font-bold mb-1">Welcome to Accessibility Checker</h1>
-            <p className="text-[16px] font-normal dark:text-gray-300 mb-4">
+            <h1 className="text-[20px] font-bold mb-1 dark:text-white">Welcome to Accessibility Checker</h1>
+            <p className="text-[16px] font-normal dark:text-[#C8C5C5] mb-4">
               Analyse your framer project for accessibility issues
             </p>
             <div className="flex space-x-2 items-center">
               <ScanButton />
               {license.plan === 'free' && (
-                <div className="text-sm text-gray-600 dark:text-gray-300">
+                <div className="text-sm text-gray-600 dark:text-[#C8C5C5]">
                   {freeScansRemaining}/{3} Free Scans Left
                 </div>
               )}
@@ -103,7 +103,7 @@ const App: React.FC = () => {
       <div>
         {isScanning ? (
           // Show scanning state
-          <div className="flex flex-col items-center justify-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow">
+          <div className="flex flex-col items-center justify-center text-center py-12 bg-white dark:bg-[#111111] rounded-lg shadow border-[2px] border-dashed border-[#EAEAEA] dark:border-[#515050]">
             <LoadingSpinner size="lg" />
             <p className="mt-4 text-gray-600 dark:text-gray-300 text-center">
               Scanning your design for accessibility issues...
@@ -115,7 +115,7 @@ const App: React.FC = () => {
         ) : issues.length > 0 ? (
           // Show scan results
           <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+            <div className="bg-white dark:bg-transparent rounded-lg p-1 shadow">
               <SeverityFilters />
             </div>
             
@@ -123,7 +123,7 @@ const App: React.FC = () => {
           </div>
         ) : (
           // Show empty state
-          <div className="flex flex-col items-center justify-center text-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow">
+          <div className="flex flex-col items-center justify-center text-center py-12 bg-white dark:bg-[#111111] rounded-lg shadow border-[2px] border-dashed border-[#EAEAEA] dark:border-[#515050]">
             <svg width="74" height="73" viewBox="0 0 74 73" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_dii_93_1079)">
 <rect x="10.6262" y="2.74561" width="52.7474" height="52.7474" rx="3.30995" fill="url(#paint0_linear_93_1079)"/>
